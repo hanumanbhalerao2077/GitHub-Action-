@@ -1,6 +1,7 @@
 # SkillPulse
 
-SkillPulse is a full-stack learning tracker that lets users manage skills and log learning sessions. It includes a CI/CD pipeline to build Docker images, publish them to Docker Hub, and deploy the app using Docker Compose.
+SkillPulse is a full-stack learning tracker that helps you manage skills and log learning sessions.
+It includes a CI/CD pipeline to build Docker images, publish them to Docker Hub, and deploy the app using Docker Compose.
 
 ## Problem it solves
 - People lose track of what they learn and how much progress they make.
@@ -15,7 +16,7 @@ GitHub → GitHub Actions → Docker build → Docker Hub → Deployment (Docker
 - Docker Compose (local orchestration)
 - GitHub Actions (CI/CD automation)
 - Backend: Go (Gin)
-- Frontend: Node.js/Static assets served by Nginx
+- Frontend: static assets served by Nginx
 - Database: MySQL
 
 ## Step-by-step: How it was built & deployed
