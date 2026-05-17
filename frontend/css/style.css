@@ -212,6 +212,23 @@ body {
     font-size: 0.8rem;
 }
 
+/* Charts */
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.chart-card {
+    padding-bottom: 0.75rem;
+}
+
+.chart-card canvas {
+    width: 100% !important;
+    height: 120px !important;
+}
+
 /* Skills Grid */
 .skills-grid {
     display: grid;
@@ -219,6 +236,7 @@ body {
     gap: 1rem;
     margin-bottom: 2rem;
 }
+
 
 .skill-card {
     background: var(--surface);

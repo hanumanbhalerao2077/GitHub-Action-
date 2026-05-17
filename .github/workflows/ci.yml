@@ -40,3 +40,12 @@ jobs:
         run: |
           echo "Smoke test placeholder: health test is done post-deploy on EC2."
 
+      - name: k6 load test (read-only)
+        uses: grafana/k6-action@v0.3.1
+        with:
+          filename: load/k6/skillpulse-load.js
+          env:
+            BASE_URL: http://localhost
+          flags: --summary-export=k6-summary.json
+
+

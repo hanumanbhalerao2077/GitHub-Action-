@@ -46,6 +46,26 @@
             </div>
         </div>
 
+        <!-- Charts -->
+        <div class="charts-grid">
+            <div class="chart-card stat-card">
+                <div class="section-header" style="margin-bottom: 0.75rem;">
+                    <h2 style="font-size: 1rem; margin: 0;">Hours by Skill</h2>
+                    <span class="chart-subtitle">Most logged first</span>
+                </div>
+                <canvas id="hoursBySkillChart" height="120"></canvas>
+            </div>
+
+            <div class="chart-card stat-card">
+                <div class="section-header" style="margin-bottom: 0.75rem;">
+                    <h2 style="font-size: 1rem; margin: 0;">Goal Progress</h2>
+                    <span class="chart-subtitle">% completion (capped at 100)</span>
+                </div>
+                <canvas id="goalProgressChart" height="120"></canvas>
+            </div>
+        </div>
+
+
         <!-- Skills Section -->
         <div class="section-header">
             <h2>My Skills</h2>
@@ -120,6 +140,8 @@
     <!-- Toast -->
     <div id="toast" class="toast"></div>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="js/app.js"></script>
+
 </body>
 </html>
