@@ -5,8 +5,9 @@ on:
     branches: [main]
 
 jobs:
-  build-and-push:
+  build-and-smoke-test:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v6
 
@@ -34,3 +35,8 @@ jobs:
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/skillpulse-frontend:${{ github.sha }}
             ${{ secrets.DOCKERHUB_USERNAME }}/skillpulse-frontend:latest
+
+      - name: Smoke test (build outputs + API health)
+        run: |
+          echo "Smoke test placeholder: health test is done post-deploy on EC2."
+

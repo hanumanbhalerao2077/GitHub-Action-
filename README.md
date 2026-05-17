@@ -63,8 +63,16 @@ GitHub → GitHub Actions → Docker build → Docker Hub → Deployment (Docker
 - MySQL persistence with seeded demo data
 
 ## Future improvements
-- Add automated backend unit/integration tests in GitHub Actions
-- Add Docker image versioning (tags by commit SHA)
 - Add production-grade security (non-root containers, stricter proxy settings)
 - Add user authentication and per-user skill tracking
+
+## Troubleshooting
+- Containers won’t connect to DB:
+  - Ensure `.env` values match your MySQL credentials.
+  - Verify `DB_HOST` is `db` when running via Docker Compose.
+- Frontend loads but API fails:
+  - Ensure your browser is loading through the frontend container (nginx) so `/api/*` is proxied.
+- Health endpoint:
+  - Visit `http://localhost/health` when using Docker Compose locally.
+
 
